@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Frank's Donuts Site</title>
+	</head>
+	<body>
+		<header>Donut's Galore!</header>
+			<div id = "container">
+				<h1>Frank's Donuts</h1>
+				<nav>Our Locations
+					<ul>
+						<li id ="Downtown">Downtown
+							<h4>Business is good</h4>
+							<ul id ="Downtown">
+								<li>Average Customers Per Hour</li>
+								<li>Average Donuts Sold Per Hour</li>
+								<li>Average Donuts Sold Per Day</li>
+							</ul>
+						</li>
+						<li>Capitol Hill
+							<h4>Business is great</h4>
+							<ul id ="CapitolHill">
+								<li>Average Customers Per Hour</li>
+								<li>Average Donuts Sold Per Hour</li>
+								<li>Average Donuts Sold Per Day</li>
+							</ul>
+						</li>
+						<li>South Lake Union
+							<h4>Business is grand</h4>
+							<ul id ="SouthLakeUnion">
+								<li>Average Customers Per Hour</li>
+								<li>Average Donuts Sold Per Hour</li>
+								<li>Average Donuts Sold Per Day</li>
+							</ul>
+						</li>
+						<li>Wedgewood
+							<h4>Business is booming</h4>
+							<ul id ="Wedgewood">
+								<li>Average Customers Per Hour</li>
+								<li>Average Donuts Sold Per Hour</li>
+								<li>Average Donuts Sold Per Day</li>
+							</ul>
+						</li>
+						<li>Ballard
+							<h4>Business is tasty</h4>
+							<ul id ="Ballard">
+								<li>Average Customers Per Hour</li>
+								<li>Average Donuts Sold Per Hour</li>
+								<li>Average Donuts Sold Per Day</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+
+<script type="text/javascript">
+
+	var Shop = function(shopHours,custMin, custMax, custAvg){
+		this.hours = shopHours;
+		this.min = custMin;
+		this.max = custMax;
+		this.avg = custAvg;
+		this.customersPerHour = [];
+		this.donutsPerHour = [];
+		this.donutsPerDay = 0;		
+		for (var i = 0; i < this.hours; i++) {
+			var customersThisHour = getRandomInt(custMin, custMax);
+			var donutsSoldThishour = custAvg * customersThisHour;
+			this.customersPerHour[i] = customersThisHour;
+			this.donutsPerHour[i] = donutsSoldThishour;
+			this.donutsPerDay += donutsSoldThishour;
+		}
+		console.log(this);			
+	}
+	function getRandomInt(custMin, custMax) {
+  		return Math.floor(Math.random() * (custMax - custMin)) + custMin;
+	}
+
+	var Downtown = new Shop(8, 8, 43, 4.5);
+	var CapitolHill  = new Shop(24, 4, 37, 2);
+	var SouthLakeUnion = new Shop(10, 9, 23, 6.33);
+	var Wedgewood = new Shop(7, 2, 28, 1.25);
+	var Ballard = new Shop(10, 8, 58, 3.75);
+	
+
+</script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+body{
+  font-family: Gotham, sans-serif;
+}
+table {
+  font-family: Arial, sans-serif;
+  border: 10px;
+  text-align: left;
+  table-layout: fixed;
+}
+td{
+  border-bottom:2px solid #007dc3;
+  border-right:2px solid #007dc3;
+  border-left: 2px solid #007dc3;
+  font-size: 18px;
+}
+th{
+  border: 2px solid #002b5c;
+  font-size: 24px;
+}
+header {
+  font-family: Bebas, sans-serif;
+  font-size: 80px;
+  color:#002b5c;
+  text-align: center;
+  line-height: 100px;
+
+}
+
+#homer{
+    float:left;
+    height: 100px;
+    width: auto;
+}
+#donut{
+    float:right;
+    height: 50px;
+    width: auto;
+    margin-top: 25px;
+}
+p {
+  padding-top: 50px;
+}

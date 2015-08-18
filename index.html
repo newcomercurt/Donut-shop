@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+		<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<title>Homer's Donuts Site</title>
 	</head>
 	<body>
 		<header>
-			Donut's Galore!
+			<span>Lard Lad</span> Donuts
 		<img src="homersimpson.png" alt="Homer" id='homer'>
 		<img src="large.png" alt="Simpson's Donut" id ='donut'>
+		<p id='tagline'><em>You don't win friends with salad!</em></p>
 		</header>
+		<h1>Click a location to see how we're doing!</h1>
+		<section class="left">
+		<div id="accordion">
 
-		<p>The table below uses JavaScript to figure out how many customers we have per hour which then tells us how many donuts we need to make per day and per hour to keep
-		our customers happy!</p>
-		<table style="width:100%">
-		<thead>
-			<tr>
-			    <th>Location</th>
-			    <th>Average Customers Per Hour</th>
-			    <th>Average Donuts to Make Per Hour</th>
-			    <th>Average Donuts to make Per Day</th>
-			</tr>
-		  </thead>
-		  <tbody>
-
-		  </tbody>
-		</table>
+		</div>
+		</section>
+		<section class="right">
+		<form>
+			<fieldset>
+				<legend>Tell us Something!
+				</legend>
+				<label>
+					Name:
+					<input type="text" id="name">
+				</label>
+				<label>
+					Comments:
+					<textarea id="comments">
+					</textarea>
+				</label>
+				 <input type="button" id="submit" value="submit">
+			</fieldset>
+			<div class="comments"></div>
+		</form>
+		<div class="comment"></div>
+		<a href="http://simpsons.wikia.com/wiki/Lard_Lad_Donuts" target="new">
+			<img src="LardLad.png" alt="Lard Lad" id="lardlad">
+		</a>
+		</section>
 	<footer>&copy;Curt Newcomer</footer>
 	<script src="../jquery-2.1.4.js"></script>
+	<script src="../jquery-ui.js"></script>
 	<script src="javascript.js"></script>
 	</body>
 

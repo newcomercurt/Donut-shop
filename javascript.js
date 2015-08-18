@@ -37,14 +37,37 @@ var shops =[
 
 for(var i =0; i < shops.length; i++) {
 	var shop = shops[i];
-	$("tbody").append(
- 		"<tr>" +
-	  		"<td>"+shop.name+"</td>" +
-	  		"<td>"+average(shop.customersPerHour).toFixed(0)+"</td>" +
-	  		"<td>"+average(shop.donutsPerHour).toFixed(0)+"</td>" +
-	  		"<td>"+shop.donutsPerDay.toFixed(0)+"</td>" +
-  		"</tr>"
+	$("#accordion").append(
+ 		"<h3>"+shop.name+"</h3>" +
+ 		"<div>" +
+	  		"<p>Customer's We Serve Per Hour:  <span>"+average(shop.customersPerHour).toFixed(0)+"</span></p>" +
+	  		"<p>Donut's We Sell Per Hour: <span>"+average(shop.donutsPerHour).toFixed(0)+"</span></p>" +
+	  		"<p>Donut's We Sell Per Day: <span>"+shop.donutsPerDay.toFixed(0)+"</span></p>" +
+  		"</div>"
 	);
 }
+$('#accordion').accordion({
+	active:false,
+	collapsible: true
+});
 
+$("#donut").draggable({
+  stop: function(event, ui){
+  	console.log (arguments)
+  }
+});
+$("#homer").droppable({
+  accept: "#donut",
+  drop: function(){
+  	$('#donut').remove();
+  	alert("Mmm...Donuts!")
+  }});
+
+  $("#submit").on("click", function(){
+  	var name = $('#name').val();
+  	var comment = $('#comments').val();
+  	$('#name').val("");
+  	$('#comments').val("");
+    $(".comments").append("<div class='comment'>"+name+" : <span>"+comment+"</span></div>");
+   });
 

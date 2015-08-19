@@ -8,10 +8,12 @@
 	</head>
 	<body>
 		<header>
-			<span>Lard Lad</span> Donuts
-		<img src="homersimpson.png" alt="Homer" id='homer'>
-		<img src="large.png" alt="Simpson's Donut" id ='donut'>
-		<p id='tagline'><em>You don't win friends with salad!</em></p>
+			<img src="homersimpson.png" alt="Homer" id='homer'>
+			<img src="large.png" alt="Simpson's Donut" id ='donut'>
+			<div>
+				<span>Lard Lad</span> Donuts
+				<p id='tagline'><em>You don't win friends with salad!</em></p>
+			</div>
 		</header>
 		<h1>Click a location to see how we're doing!</h1>
 		<section class="left">
@@ -22,18 +24,17 @@
 		<section class="right">
 		<form>
 			<fieldset>
-				<legend>Tell us Something!
+				<legend>Tell us something!
 				</legend>
 				<label>
-					Name:
+					<span>Name:</span>
 					<input type="text" id="name">
 				</label>
 				<label>
-					Comments:
-					<textarea id="comments">
-					</textarea>
+					<span>Comments:</span>
+					<textarea id="comments"></textarea>
 				</label>
-				 <input type="button" id="submit" value="submit">
+				 <button id="submit">Send it!</button>
 			</fieldset>
 			<div class="comments"></div>
 		</form>
